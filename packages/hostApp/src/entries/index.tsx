@@ -4,15 +4,15 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    Link
-} from "react-router-dom";
-import { registerMicroApps, start } from 'qiankun';
+    Link,
+} from 'react-router-dom';
+import {registerMicroApps, start} from 'qiankun';
 
 window.__POWERED_BY_QIANKUN__ = true;
 
 registerMicroApps([
     {
-        name: 'reactapp1',
+        name: 'react18app',
         entry: '//localhost:8200',
         container: '#container',
         activeRule: '/app-react',
@@ -30,13 +30,13 @@ start();
 function App() {
     return (
         <>
-            <Link to="/">Home</Link> | {" "}
-            <Link to="/app-react">React</Link> | {" "}
+            <Link to="/">Home</Link> | {' '}
+            <Link to="/app-react">React</Link> | {' '}
             <Link to="/app-vue">Vue</Link>
             <h1>Hello World, Im host</h1>
         </>
     );
-};
+}
 
 const AppRoutes = () => {
     return (
@@ -45,8 +45,8 @@ const AppRoutes = () => {
             <Route path="/app-react" />
             <Route path="/app-vue" />
         </Routes>
-    )
-}
+    );
+};
 
 const root = ReactDOM.createRoot(document.body.appendChild(document.createElement('div')));
 
@@ -55,5 +55,5 @@ root.render(
         <BrowserRouter>
             <AppRoutes />
         </BrowserRouter>
-    </StrictMode>,
+    </StrictMode>
 );

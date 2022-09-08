@@ -7,12 +7,13 @@ export const WithInput = () => {
     const [timer, setTimer] = useState(1000);
     const [inputTimeValue, setInputTimeValue] = useState(0);
     const [counter, setCounter] = useState(0);
+    const customHandler = () => {
+        setCounter(counter => counter + 1);
+    }
     useEffect(
         () => {
             const clear = setInterval(
-                () => {
-                    setCounter(counter => counter + 1);
-                },
+                customHandler,
                 timer
             );
             return () => {
@@ -20,7 +21,7 @@ export const WithInput = () => {
                 clearInterval(clear);
             };
         },
-        [timer]
+        [customHandler, timer]
     );
     const onChange: ChangeEventHandler<HTMLInputElement> = e => {
         setInputTimeValue(Number(e.target.value))
