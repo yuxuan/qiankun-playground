@@ -15,6 +15,14 @@ export default configure(
                 return webpackConfig;
             },
         },
+        featureMatrix: {
+            stable: {
+                test: 'stable',
+            },
+            dev: {
+                test: 'dev'
+            }
+        },
         devServer: {
             port: 8201,
             apiPrefixes: ['/api'], // TODO: 设置后端API的URL前缀
