@@ -5,6 +5,7 @@ import {BrowserRouter} from 'react-router-dom';
 import App from '@/components/App';
 import '@/styles';
 import '../public-path';
+import PreloadedImages from './PreloadedImages';
 
 let root: ReactDOM.Root | null = null;
 function render() {
@@ -14,6 +15,7 @@ function render() {
             { /* eslint-disable-next-line no-underscore-dangle */ }
             <BrowserRouter basename={window.__POWERED_BY_QIANKUN__ ? '/app-react' : '/'}>
                 <App />
+                <PreloadedImages />
             </BrowserRouter>
         </StrictMode>
     );
