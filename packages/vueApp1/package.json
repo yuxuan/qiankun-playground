@@ -1,0 +1,43 @@
+{
+    "name": "vueapp1",
+    "version": "0.0.1",
+    "description": "#description#",
+    "repository": {
+        "type": "git",
+        "url": "#sshURL#"
+    },
+    "author": "#author#",
+    "scripts": {
+        "start": "vue-cli-service serve --port 8300",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint --no-fix; stylelint src/**/*.{vue,css,less}",
+        "lint:fix": "vue-cli-service lint; stylelint --fix src/**/*.{vue,css,less}"
+    },
+    "dependencies": {
+        "core-js": "^3.8.3",
+        "vue": "^2.6.14"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.15.0",
+        "@babel/eslint-plugin": "^7.14.5",
+        "@ecomfe/eslint-config": "^7.2.0",
+        "@ecomfe/stylelint-config": "^1.1.1",
+        "@typescript-eslint/eslint-plugin": "^4.29.0",
+        "@typescript-eslint/parser": "^4.29.0",
+        "@vue/cli-plugin-babel": "~5.0.0-beta.2",
+        "@vue/cli-plugin-eslint": "~5.0.0-beta.2",
+        "@vue/cli-plugin-typescript": "~5.0.0-beta.2",
+        "@vue/cli-service": "~5.0.0-beta.2",
+        "@vue/composition-api": "^1.7.0",
+        "@vue/eslint-config-typescript": "^7.0.0",
+        "eslint": "^7.32.0",
+        "eslint-plugin-vue": "^7.15.1",
+        "husky": "^4.3.8",
+        "less": "^4.1.1",
+        "less-loader": "^10.0.1",
+        "lint-staged": "^11.1.2",
+        "stylelint": "^13.13.1",
+        "typescript": "^4.3.5",
+        "vue-template-compiler": "^2.6.14"
+    }
+}

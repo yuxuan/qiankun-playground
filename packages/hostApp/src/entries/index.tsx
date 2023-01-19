@@ -22,10 +22,16 @@ registerMicroApps([
         entry: '//localhost:8300',
         container: '#container',
         activeRule: '/app-vue',
+        props: {
+            window,
+        },
     },
 ]);
 // 启动 qiankun
-start();
+start({
+    sandbox: true,
+    singular: true,
+});
 
 function App() {
     return (

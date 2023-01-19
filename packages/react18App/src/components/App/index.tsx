@@ -1,14 +1,11 @@
 import {Routes, Route, Link, Outlet} from 'react-router-dom';
-import IntervalApp from '../Interval';
-import Background from '../BackgroundLoad';
+import Welcome from './Welcome';
 
 const App = () => {
     return (
         <>
             <nav>
-                <Link to="interval">Interval</Link>
-                {" | "}
-                <Link to="background">Background</Link>
+                <Link to="welcome">11</Link>
             </nav>
             <Outlet />
         </>
@@ -19,8 +16,7 @@ export default () => {
     return (
         <Routes>
             <Route path="/" element={<App />}>
-                <Route path="interval/*" element={<IntervalApp />} />
-                <Route path="background/*" element={<Background />} />
+                <Route path="welcome" element={<Welcome />} />
             </Route>
         </Routes>
     );

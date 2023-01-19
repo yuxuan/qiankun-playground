@@ -28,8 +28,8 @@ if (!window.__POWERED_BY_QIANKUN__) {
 export async function bootstrap() {
     console.log('[qiankun] react app bootstraped');
 }
-
 export async function mount(props: any) {
+
     console.log('[qiankun] props from main framework', props);
     render(props);
 }
