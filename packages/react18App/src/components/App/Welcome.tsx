@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy } from 'react';
+import {Boundary} from 'react-suspense-boundary';
+
+const HelloFederation = lazy(() => import('helloFederation/Hello'));
 
 export default () => {
     const [native, setNative] = useState();
@@ -16,6 +19,10 @@ export default () => {
 
     return (
         <>
+            <Boundary>
+                <HelloFederation />
+            </Boundary>
+            <br />
             <iframe src="http://localhost:8100/app-vue" width="1024" ></iframe>
             <p>native: {native}</p>
             <p>vue: {vue}</p>

@@ -115,7 +115,7 @@ export default defineComponent({
         },
     },
     created() {
-        console.log(22, window);
+        console.log(22, window.parent.postMessage);
         window.addEventListener('message', event => {
             if (event.origin !== 'http://localhost:3000') {
                 return;
